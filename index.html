@@ -1,0 +1,253 @@
+<style>
+    /* CSS RESET BELOW */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* html5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    input::-moz-focus-inner {
+        border: 0;
+    }
+    /* CSS RESET ABOVE */
+
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #image-div {
+        display: block;
+        width: auto;
+        margin: auto;
+        padding-top: 17vh;
+    }
+    #image {
+        display: block;
+        margin: auto;
+    }
+    #search-div {
+        padding-top: 30px;
+        margin: auto;
+    }
+    #search-bar {
+        display: block;
+        margin: auto;
+        width: 550px;
+        height: 43px;
+        font-size: 14px;
+        border-style:solid;
+        border-width: 1px;
+    }
+    #search-bar:focus {
+        border-color:rgb(167, 167, 167);
+    }
+    .button {
+        padding: 0px 14px 0px 12px;
+        height: 38px;
+        font-size: 14px;
+        color: rgb(100, 100, 100);
+        background-color: #F1F1F1;
+        border-radius: 4px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #FFF;
+    }
+    .button:hover {
+        border-color: rgb(163, 163, 163);
+        background-color: #F6F6F6;
+        color: #222;
+        border-style: ridge;
+        cursor: pointer;
+    }
+    .button:focus {
+        border-color: rgba(0, 38, 255, 0.5);
+    }
+    #button-div {
+        display: flex;
+        justify-content: center;
+        padding: 25px 0 0 0;
+    }
+    .button-divider {
+    width: 10px;
+    height: auto;
+    display: inline-block;
+    }
+    #header-nav {
+        display: flex;
+        width: 100vw;
+        height: 60px;
+        justify-content: space-between;
+    }
+    #hnav-left {
+        color: rgb(58, 58, 58);
+        text-decoration: none;
+        font-size: 13px;
+        padding: 24px 0 0 25px;
+    }
+    #hnav-right {
+        color: rgb(44, 44, 44);
+        text-decoration: none;
+        font-size: 13px;
+        padding: 16px 30px 0 0;
+    }
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .link-divider {
+        width: 11px;
+        height: auto;
+        display: inline-block;
+    }
+    .link-divider-large {
+        width: 20px;
+        height: auto;
+        display: inline-block;
+    }
+    .link-divider-xlarge {
+        width: 25px;
+        height: auto;
+        display: inline-block;
+    }
+    .content-button {
+        position: absolute;
+        padding: 0px 8px;
+        border-style: solid;
+        border-width: 1px;
+        margin-top: 5px;
+        right: 115px;
+    }
+    .sign-in-button {
+        padding: 6px 13px;
+        border-style: solid;
+        background-color: rgba(14, 85, 238, 0.74);
+        border-width: 0;
+        border-radius: 5%;
+        font-weight: bold;
+        color: white;
+        font-size: 13px;
+    }
+    .sign-in-button:hover {
+        background-color: rgba(14, 85, 238, 0.65);
+    }
+    #footer-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 40px;
+        width: 100vw;
+        justify-content: space-between;
+        background-color: rgba(218, 218, 218, 0.26);
+        border-top: 1px solid rgba(172, 172, 172, 0.322);
+        align-items: center;
+        font-size: 14px;
+        color: rgb(90, 90, 90);
+    }
+    #hnav-bottom-left {
+        padding-left: 30px;
+    }
+    #hnav-bottom-right {
+        padding-right: 30px;
+    }
+</style>
+
+
+
+<html>
+    <head>
+        <title>Google</title>
+    </head>
+
+    <body>
+        <header>
+            <div id="header-nav">
+                <div id="hnav-left">
+                    <a href="#">About</a>
+                    <div class="link-divider"></div>
+                    <a href="#">Store</a>
+                </div>
+                <div id="hnav-right">
+                    <a href="#">Gmail</a>
+                    <div class="link-divider"></div>
+                    <a href="#">Images</a>
+                    <div class="link-divider-xlarge"></div>
+                    <input class="content-button" type="button">
+                    <div class="link-divider"></div>
+                    <input class="sign-in-button" type="button" value="Sign in">
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="image-div">
+                <img id="image" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+            </div>
+            <div id="search-div">
+                <input id="search-bar" type="text">
+            </div>
+            <div id="button-div">
+                <input id="search-button" class="button" type="button" value="Google Search">
+                <div class="button-divider"></div>
+                <input id="lucky-button" class="button" type="button" value="I'm Feeling Lucky">
+            </div>
+        </main>
+        <footer>
+            <div id="footer-nav">
+                <div id="hnav-bottom-left">
+                    <a href="#">Advertising</a>
+                    <div class="link-divider-large"></div>
+                    <a href="#">Business</a>
+                    <div class="link-divider-large"></div>
+                    <a href="#">How Search works</a>
+                </div>
+                <div id="hnav-bottom-right">
+                    <a href="#">Privacy</a>
+                    <div class="link-divider-large"></div>
+                    <a href="#">Terms</a>
+                    <div class="link-divider-large"></div>
+                    <a href="#">Settings</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
